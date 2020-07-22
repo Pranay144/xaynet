@@ -108,10 +108,10 @@ async fn test_scalar_svc() {
     let resp = task.call(ScalarRequest).await;
     assert_eq!(resp, Ok(None));
 
-    publisher.broadcast_scalar(ScalarUpdate::New(42.42));
+    publisher.broadcast_scalar(ScalarUpdate::New(0.42));
     assert_ready!(task.poll_ready()).unwrap();
     let resp = task.call(ScalarRequest).await;
-    assert_eq!(resp, Ok(Some(42.42)));
+    assert_eq!(resp, Ok(Some(0.42)));
 
     publisher.broadcast_scalar(ScalarUpdate::Invalidate);
     assert_ready!(task.poll_ready()).unwrap();

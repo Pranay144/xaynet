@@ -32,7 +32,7 @@ pub struct RoundParameters {
 pub struct CoordinatorState {
     /// The credentials of the coordinator.
     pub keys: EncryptKeyPair,
-    /// Internal ID used to identify a round
+    /// Internal ID used to identify a round.
     pub round_id: u64,
     /// The round parameters.
     pub round_params: RoundParameters,

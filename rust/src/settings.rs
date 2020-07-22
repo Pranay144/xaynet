@@ -125,6 +125,8 @@ pub struct PetSettings {
     /// ```text
     /// XAYNET_PET__MIN_SUM_TIME=5
     /// ```
+    ///
+    /// [`min_sum_count`]: #structfield.min_sum_count
     pub min_sum_time: u64,
 
     /// The minimum amount of time reserved for processing messages in the
@@ -147,6 +149,8 @@ pub struct PetSettings {
     /// ```text
     /// XAYNET_PET__MIN_UPDATE_TIME=10
     /// ```
+    ///
+    /// [`min_update_count`]: #structfield.min_update_count
     pub min_update_time: u64,
 
     /// The expected fraction of participants selected for computing the unmasking sum. The value

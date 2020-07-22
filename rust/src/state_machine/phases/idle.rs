@@ -18,6 +18,8 @@ pub struct Idle;
 
 impl<R> Handler<Request> for PhaseState<R, Idle> {
     /// Reject all the request with a [`PetError::InvalidMessage`]
+    ///
+    /// [`PetError::InvalidMessage`]: crate::PetError::InvalidMessage
     fn handle_request(&mut self, req: Request) {
         reject_request(req);
     }
